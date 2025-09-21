@@ -16,6 +16,11 @@ Additional tooling:
 - `codemagic.yaml` configures the CI/CD pipeline that drives automatic builds.
 - `experience_marketplace/scripts` contains helper launch scripts for mock, localhost, and hosted backends.
 
+## Live builds
+
+- Presentation deck: https://flutterconflatam-fullstack-dart-demo.codemagic.app/
+- Experience marketplace app: https://flutterconflatam-experience-marketplace.codemagic.app/
+
 ## Repository Layout
 
 ```
@@ -66,9 +71,9 @@ graph LR
 
 ```mermaid
 flowchart TD
-  UI[Presentation layer<br/>(screens, widgets)] --> State[State & DI<br/>(Provider, feature flags)]
-  State --> Repo[Repositories<br/>(API & mock implementations)]
-  Repo --> Services[Services<br/>(ServerpodService, AuthService)]
+  UI["Presentation layer<br/>(screens, widgets)"] --> State["State & DI<br/>(Provider, feature flags)"]
+  State --> Repo["Repositories<br/>(API & mock implementations)"]
+  Repo --> Services["Services<br/>(ServerpodService, AuthService)"]
   Services --> Backend[(Serverpod backend)]
   Repo --> Mock[(Seeded mock data & demos)]
 ```
