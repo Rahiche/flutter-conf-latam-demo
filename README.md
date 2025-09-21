@@ -66,13 +66,9 @@ graph LR
 
 ```mermaid
 flowchart TD
-  UI[Presentation layer
-  (screens, widgets)] --> State[State & DI
-  (Provider, feature flags)]
-  State --> Repo[Repositories
-  (API & mock implementations)]
-  Repo --> Services[Services
-  (ServerpodService, AuthService)]
+  UI[Presentation layer<br/>(screens, widgets)] --> State[State & DI<br/>(Provider, feature flags)]
+  State --> Repo[Repositories<br/>(API & mock implementations)]
+  Repo --> Services[Services<br/>(ServerpodService, AuthService)]
   Services --> Backend[(Serverpod backend)]
   Repo --> Mock[(Seeded mock data & demos)]
 ```
@@ -88,9 +84,9 @@ Key directories:
 - `experience_marketplace/scripts` includes ready-to-run launchers (`run_mock.sh`, `run_localhost.sh`, `run_online.sh`).
 
 ### Presentation deck (`presentation_app`)
-- `presentation_app/lib/slides` implements each slide as a widget, mixing storytelling content with embedded marketplace demos (`slide9_spam_demo.dart`, `slide12_flutter_latam_demo.dart`).
+- `presentation_app/lib/slides` implements each slide as a widget.
 - The deck depends on the marketplace package so it can reuse themes, providers, and repositories when demonstrating live features.
-- `presentation_app/lib/services/theme_service.dart` supports dynamic theming during the talk.
+
 
 ## Running the Stack
 
@@ -107,4 +103,3 @@ Key directories:
 - Keep shared DTOs in `experience_common` so both Flutter apps and the server contract stay in sync.
 - Use mock repositories during UI prototyping—toggle modes via `ServerConfig.isMockMode` in `experience_marketplace/lib/config/server_config.dart` to avoid needing the backend.
 
-Enjoy exploring the full-stack demo!
