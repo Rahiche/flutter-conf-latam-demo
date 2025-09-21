@@ -1,0 +1,6 @@
+class: Review
+table: review
+fields:
+    score: int
+    createdAt: DateTime?, scope=serverOnly
+    userId: int, relation(parent=user)

@@ -1,0 +1,59 @@
+name: experience_marketplace
+description: "A modern, animated experiences marketplace mobile app"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  experience_common:
+    path: ../experience_common
+
+  # UI & Animations
+  flutter_staggered_animations: ^1.1.1
+  shimmer: ^3.0.0
+  flutter_animate: ^4.5.0
+
+  # State Management
+  provider: ^6.1.2
+
+  # Images & Media
+  cached_network_image: ^3.3.1
+  carousel_slider: ^5.0.0
+
+  # Utilities
+  google_fonts: ^6.2.1
+
+  # Icons
+  cupertino_icons: ^1.0.8
+
+  # HTTP (for future API integration)
+  serverpod_client: 3.0.0-alpha.1
+  serverpod_auth_shared_flutter: 3.0.0-alpha.1
+  serverpod_flutter: 3.0.0-alpha.1
+
+  # Device Preview
+  device_preview: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/animations/
+    - assets/icons/
+    - assets/fonts/

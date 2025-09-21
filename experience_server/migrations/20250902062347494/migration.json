@@ -1,0 +1,74 @@
+{
+  "actions": [
+    {
+      "type": "alterTable",
+      "alterTable": {
+        "name": "review",
+        "schema": "public",
+        "addColumns": [],
+        "deleteColumns": [
+          "experienceId"
+        ],
+        "modifyColumns": [],
+        "addIndexes": [],
+        "deleteIndexes": [],
+        "addForeignKeys": [
+          {
+            "constraintName": "review_fk_0",
+            "columns": [
+              "userId"
+            ],
+            "referenceTable": "user",
+            "referenceTableSchema": "public",
+            "referenceColumns": [
+              "id"
+            ],
+            "onUpdate": 3,
+            "onDelete": 3
+          },
+          {
+            "constraintName": "review_fk_1",
+            "columns": [
+              "_experienceReviewsExperienceId"
+            ],
+            "referenceTable": "experience",
+            "referenceTableSchema": "public",
+            "referenceColumns": [
+              "id"
+            ],
+            "onUpdate": 3,
+            "onDelete": 3
+          }
+        ],
+        "deleteForeignKeys": [
+          "review_fk_2",
+          "review_fk_0",
+          "review_fk_1"
+        ],
+        "warnings": [
+          {
+            "type": "columnDropped",
+            "message": "Column \"experienceId\" of table \"review\" will be dropped.",
+            "table": "review",
+            "columns": [
+              "experienceId"
+            ],
+            "destrucive": true
+          }
+        ]
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "type": "columnDropped",
+      "message": "Column \"experienceId\" of table \"review\" will be dropped.",
+      "table": "review",
+      "columns": [
+        "experienceId"
+      ],
+      "destrucive": true
+    }
+  ],
+  "migrationApiVersion": 1
+}

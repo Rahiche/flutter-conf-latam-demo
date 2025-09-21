@@ -1,0 +1,48 @@
+workflows:
+  flutter-web-wasm:
+    name: Flutter Web WASM Build
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    working_directory: presentation_app
+    
+    environment:
+      flutter: stable
+      
+    cache:
+      cache_paths:
+        - $HOME/.pub-cache
+        - $HOME/.gradle/caches
+        - $FLUTTER_ROOT/.pub-cache
+        
+    triggering:
+      events:
+        - push
+        - pull_request
+      branch_patterns:
+        - pattern: 'main'
+          include: true
+        - pattern: 'master'
+          include: true
+        - pattern: 'develop'
+          include: true
+        - pattern: '*'
+          include: true
+      cancel_previous_builds: true
+      
+    scripts:
+      - name: Get Flutter packages
+        script: |
+          flutter pub get
+          
+      - name: Build Flutter web with WASM
+        script: |
+          flutter build web --wasm --release
+          
+      - name: Copy build to artifacts directory
+        script: |
+          mkdir -p $CM_BUILD_DIR/web-build
+          cp -r build/web/* $CM_BUILD_DIR/web-build/
+          
+    artifacts:
+      - web-build/**
+      

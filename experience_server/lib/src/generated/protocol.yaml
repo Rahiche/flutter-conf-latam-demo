@@ -1,0 +1,12 @@
+category:
+  - getCategories:
+  - getCategory:
+experience:
+  - getExperiences:
+  - getExperiencesByCategory:
+  - getExperience:
+  - registerAttendance:
+  - unregisterAttendance:
+user:
+  - getMe:
+  - getUser:

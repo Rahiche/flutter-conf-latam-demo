@@ -1,0 +1,11 @@
+class: Experience
+table: experience
+fields:
+    name: String
+    location: String
+    photoUrl: String?
+    startsAt: DateTime
+    endsAt: DateTime
+    attendees: List<User>?, relation
+    reviews: List<Review>?, relation
+    category: Category?, relation

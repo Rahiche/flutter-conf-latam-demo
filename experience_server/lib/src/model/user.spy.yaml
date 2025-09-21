@@ -1,0 +1,10 @@
+class: User
+table: user
+fields:
+    userInfo: module:auth:UserInfo?, relation
+    createdAt: DateTime?, scope=serverOnly
+    profilePhotoUrl: String
+indexes:
+    user_info_id_unique_idx:
+        fields: userInfoId
+        unique: true

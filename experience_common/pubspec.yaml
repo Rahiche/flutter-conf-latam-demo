@@ -1,0 +1,8 @@
+name: experience_common
+description: Common code shared between the client and the server
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  serverpod_client: 3.0.0-alpha.1

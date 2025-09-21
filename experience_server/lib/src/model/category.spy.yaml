@@ -1,0 +1,6 @@
+class: Category
+table: category
+fields:
+    name: String
+    iconUrl: String
+    approved: bool?, scope=serverOnly
