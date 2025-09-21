@@ -1,5 +1,7 @@
 # Flutter Conf LATAM Demo Monorepo
 
+> Made by: [Raouf Rahiche](https://github.com/rahiche), [Nemanja Stosic](https://github.com/nstosic), and [Diego Velásquez](https://github.com/diegoveloper).
+
 This repository hosts the end-to-end demo showcased at Flutter Conf LATAM. It bundles the Serverpod backend, a Flutter marketplace app, and the live presentation deck into a single workspace so you can run the full stack or reuse individual pieces.
 
 ## Packages at a Glance
